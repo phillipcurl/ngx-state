@@ -1,0 +1,13 @@
+{
+  "generator-angular-library": {
+    "githubUsername": "phillipcurl",
+    "githubRepoName": "ngx-state",
+    "npmModuleName": "ngx-state",
+    "moduleGlobal": "ngxState",
+    "ngModuleName": "NgxStateModule",
+    "selectorPrefix": "state",
+    "projectTitle": "ngx-state",
+    "projectDescription": "An Angular module for managing app state without (much) overhead",
+    "authorName": "Phillip Curl"
+  }
+}
