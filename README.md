@@ -24,9 +24,10 @@ An Angular module for managing app state without (much) overhead
 
 ## Installation
 
-Install through npm:
+Install via npm or Yarn:
 ```
 npm install --save ngx-state
+yarn add ngx-state
 ```
 
 Then include in your apps module:
@@ -37,7 +38,7 @@ import { NgxStateModule } from 'ngx-state';
 
 @NgModule({
   imports: [
-    NgxStateModule.forRoot()
+    NgxStateModule
   ]
 })
 export class MyModule {}
@@ -46,11 +47,32 @@ export class MyModule {}
 Finally use in one of your apps components:
 ```typescript
 import { Component } from '@angular/core';
+import { ReactiveState } from 'ngx-state';
 
 @Component({
-  template: '<hello-world></hello-world>'
+  selector: 'state-demo-app',
+  template: `
+    <div>
+      <button (click)="onClick()" class="btn btn-default">CLICK ME</button>
+    </div>
+  `
 })
-export class MyComponent {}
+export class MyComponent {
+  count: number = 0;
+
+  constructor(private _state: ReactiveState) {
+    this._state.subscribe('buttonClick', (data) => {
+      if (data) {
+        alert(data);
+      }
+    });
+  }
+
+  onClick() {
+    this.count++;
+    this._state.notifyDataChanged('buttonClick', `The current count is: ${this.count}`);
+  }
+}
 ```
 
 You may also find it useful to view the [demo source](https://github.com/phillipcurl/ngx-state/blob/master/demo/demo.component.ts).

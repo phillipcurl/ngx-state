@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
     <title>ngx-state</title>
     <style type="text/css">
       .container-demo {
         margin-top: 70px;
+        min-height: 70vh;
       }
     </style>
   </head>
@@ -22,22 +23,28 @@
         data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
     </a>
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">ngx-state</a>
-        </div>
-        <ul class="nav navbar-nav hidden-xs">
-          <li class="active"><a href="javascript:;">Demo</a></li>
-          <li><a href="https://github.com/phillipcurl/ngx-state#installation">Installation</a></li>
-          <li><a href="https://phillipcurl.github.io/ngx-state/docs/">Documentation</a></li>
-        </ul>
+    <nav class="pa3 pa4-ns">
+      <a class="link dim black b f1 f-headline-ns tc db mb3 mb4-ns" href="#" title="Home">ngx-state</a>
+      <div class="tc pb3">
+        <a class="link dim gray f6 f5-ns dib mr3" href="https://github.com/phillipcurl/ngx-state#installation" title="Installation" target="_blank">Installation</a>
+        <a class="link dim gray f6 f5-ns dib mr3" href="javascript:;" title="Demo">Demo</a>
+        <a class="link dim gray f6 f5-ns dib" href="https://phillipcurl.github.io/ngx-state/docs/" title="Documentation" target="_blank">Documentation</a>
       </div>
     </nav>
 
     <div class="container-fluid container-demo">
       <state-demo-app>Loading demo...</state-demo-app>
     </div>
+
+    <footer class="ph3 ph4-ns pv6 bt b--black-10 black-70">
+      <a href="mailto:" class="link b f3 f2-ns dim black-70 lh-solid">hi@phillipcurl.com</a>
+      <p class="f6 db b ttu lh-solid">© 2017 Phillip Curl</p>
+      <div class="mt5">
+        <a href="/language/" title="Language" class="f6 dib pr2 mid-gray dim">Language</a>
+        <a href="/terms/"    title="Terms" class="f6 dib ph2 mid-gray dim">Terms of Use</a>
+        <a href="/privacy/"  title="Privacy" class="f6 dib pl2 mid-gray dim">Privacy</a>
+      </div>
+    </footer>
 
   </body>
 </html>
